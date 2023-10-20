@@ -27,7 +27,7 @@ const UserDetailsForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const filter = flight.filter((val) => {
+    const filter = flight?.filter((val) => {
         return  val?.flightNbr === router.query.value} )
     // You can process and submit the user data here
     setfilterData(filter)
@@ -38,7 +38,7 @@ const UserDetailsForm = () => {
   return (
     <div className=' gradient-bg-welcome'>
       <Nav/>
-    <div className="min-h-screen flex items-center justify-center   "> 
+    <div className="min-h-screen flex items-center justify-center gradient-bg-welcome "> 
       {!filterData  ?
         <div className="bg-white p-8 rounded shadow-md w-96">
         <h2 className="text-2xl font-semibold mb-4">User Details</h2>
